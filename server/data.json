@@ -1,0 +1,302 @@
+[
+  {
+    "id": "7b1921a5-921d-48c6-82bb-5bd220bacf69",
+    "creationTime": 1542111235544,
+    "companyName": "Amazon",
+    "amountReq": 500000.0,
+    "borrower": {
+      "bankruptcy": false,
+      "creditScore": 720,
+      "ssn": 100541530,
+      "financeData": {
+        "number": "XXXXXX1530",
+        "balance": 2970405524.0,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "jeff",
+        "lastName": "bezos",
+        "email": "jeff@amazon.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "California",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Closed"]
+  },
+  {
+    "id": "ca5858ee-74ea-4095-98f8-456ec6f7b9d9",
+    "creationTime": 1552111235544,
+    "companyName": "Google",
+    "amountReq": 10000.0,
+    "borrower": {
+      "bankruptcy": false,
+      "creditScore": 579,
+      "ssn": 108249527,
+      "financeData": {
+        "number": "XXXXXX9527",
+        "balance": 92363855.93,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "sergey",
+        "lastName": "brin",
+        "email": "sergey@google.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "California",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Possible", "Open"]
+  },
+  {
+    "id": "31406362-c6ba-4c73-a5f3-c080dc8c9df8",
+    "creationTime": 1552771235544,
+    "companyName": "Meta aka Facebook",
+    "amountReq": 7000.0,
+    "borrower": {
+      "bankruptcy": true,
+      "creditScore": 579,
+      "ssn": 107283277,
+      "financeData": {
+        "number": "XXXXXX3277",
+        "balance": 7884441.24,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "mark",
+        "lastName": "zuckerberg",
+        "email": "mark@facebook.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Illinois",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Decline"]
+  },
+  {
+    "id": "0671ad35-647e-4237-bb16-064aa9e9c41b",
+    "creationTime": 1542111235544,
+    "companyName": "BBB",
+    "amountReq": 500000.0,
+    "borrower": {
+      "bankruptcy": false,
+      "creditScore": 680,
+      "ssn": 787248923,
+      "financeData": {
+        "number": "XXXXXX8923",
+        "balance": 277524.0,
+        "currency": "NIS"
+      },
+      "user": {
+        "firstName": "kevin",
+        "lastName": "rabb",
+        "email": "kevin@outlook.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Ohio",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Close"]
+  },
+  {
+    "id": "9a114712-7405-4079-94a6-64dc34007771",
+    "creationTime": 1552111235544,
+    "companyName": "Hamburg",
+    "amountReq": 18000.0,
+    "borrower": {
+      "bankruptcy": false,
+      "creditScore": 579,
+      "ssn": 725047653,
+      "financeData": {
+        "number": "XXXXXX7653",
+        "balance": 27855.0,
+        "currency": "NIS"
+      },
+      "user": {
+        "firstName": "rob",
+        "lastName": "bob",
+        "email": "rob@yahoo.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Georgia",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Possible", "Open"]
+  },
+  {
+    "id": "c5ddeeb3-48e9-448f-9cec-a1034f46896d",
+    "creationTime": 1552771235544,
+    "companyName": "Japanika",
+    "amountReq": 7000.0,
+    "borrower": {
+      "bankruptcy": true,
+      "creditScore": 520,
+      "ssn": 575857098,
+      "financeData": {
+        "number": "XXXXXX7098",
+        "balance": 7888.74,
+        "currency": "NIS"
+      },
+      "user": {
+        "firstName": "alice",
+        "lastName": "cooper",
+        "email": "alice_c@gmail.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Pennsylvania",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Decline"]
+  },
+  {
+    "id": "0120c1ec-dbc7-450b-ae6c-46015493eca4",
+    "creationTime": 1542111235544,
+    "companyName": "Apple",
+    "amountReq": 102000.0,
+    "borrower": {
+      "bankruptcy": false,
+      "creditScore": 700,
+      "ssn": 168689212,
+      "financeData": {
+        "number": "XXXXXX9212",
+        "balance": 275524.0,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "tim",
+        "lastName": "cook",
+        "email": "tim@apple.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Massachusetts",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Close"]
+  },
+  {
+    "id": "71c341e4-5ed5-4732-80ff-078f527ae1b2",
+    "creationTime": 1552111235544,
+    "companyName": "Yahoo",
+    "amountReq": 12500.0,
+    "borrower": {
+      "bankruptcy": false,
+      "creditScore": 590,
+      "ssn": 658885263,
+      "financeData": {
+        "number": "XXXXXX5263",
+        "balance": 22855.24,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "jim",
+        "lastName": "lanzone",
+        "email": "jim@yahoo.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Alaska",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Possible", "Open"]
+  },
+  {
+    "id": "6f5f43cd-9dce-44bb-983e-924fccaa4533",
+    "creationTime": 1552771235544,
+    "companyName": "Oreo",
+    "amountReq": 7000.0,
+    "borrower": {
+      "bankruptcy": true,
+      "creditScore": 500,
+      "ssn": 786385213,
+      "financeData": {
+        "number": "XXXXXX5213",
+        "balance": 78842.67,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "sam",
+        "lastName": "porcello",
+        "email": "sam@oreo.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Hawaii",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Decline"]
+  },
+  {
+    "id": "c8416823-4db4-420e-8e4b-909d7d8207f8",
+    "creationTime": 1542111235544,
+    "companyName": "Bose",
+    "amountReq": 70000.0,
+    "borrower": {
+      "bankruptcy": false,
+      "creditScore": 620,
+      "ssn": 144202245,
+      "financeData": {
+        "number": "XXXXXX2245",
+        "balance": 274354.0,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "lila",
+        "lastName": "snyder",
+        "email": "lila@bose.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Florida",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Close"]
+  },
+  {
+    "id": "2c89c62f-0f9e-4d73-8c0e-9ea9556e4986",
+    "creationTime": 1552111235544,
+    "companyName": "Ray Ban",
+    "amountReq": 5200.0,
+    "borrower": {
+      "bankruptcy": false,
+      "creditScore": 540,
+      "ssn": 144582268,
+      "financeData": {
+        "number": "XXXXXX2268",
+        "balance": 22955.37,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "luca",
+        "lastName": "tait",
+        "email": "luca@ray-ban.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Washington",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Possible", "Open"]
+  },
+  {
+    "id": "70998115-8f48-49bf-a6ad-81d8b6b07ce4",
+    "creationTime": 1552771235544,
+    "companyName": "Lenovo",
+    "amountReq": 7200.0,
+    "borrower": {
+      "bankruptcy": true,
+      "creditScore": 498,
+      "ssn": 492560903,
+      "financeData": {
+        "number": "XXXXXX0903",
+        "balance": 465348.74,
+        "currency": "USD"
+      },
+      "user": {
+        "firstName": "yang",
+        "lastName": "yuanqing",
+        "email": "alice_c@gmail.com",
+        "phoneNumber": "(855) 123-1233",
+        "state": "Texas",
+        "userIp": "12.12.12.12"
+      }
+    },
+    "labels": ["Decline"]
+  }
+]

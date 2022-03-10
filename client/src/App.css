@@ -1,0 +1,109 @@
+:root {
+  --max-width-sm-screen: 460px;
+  --min-width-md-screen: "461px";
+  --max-width-md-screeen:"720px";
+  --min-width-lg-screen: "721px";
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 100px;
+  padding: 50px; }
+  .app-container {
+    max-width: 1000px;
+    margin: 0 auto; 
+  }
+  .app-header {
+    font-weight: 300; }
+  .matches-results-number {
+    color: #7a92a5;
+    font-size: 12px;
+    margin: 12px 5px; }
+  .search-container {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px 1px #e1e5e8;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    position: relative; }
+    .search-input {
+      width: 100%;
+      text-overflow: ellipsis;
+      display: inline-block;
+      color: #20455e;
+      font-size: 14px;
+      outline: 0;
+      transition: border 0.1s ease;
+      resize: none;
+      border: 1px solid #b6c1cd;
+      border: none; }
+      .search-input::placeholder {
+        color: #b6c1cd; }
+  body a {
+    color: #3899ec;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px; }
+  .matches-container {
+    margin: 0;
+    padding: 0;
+    position: relative; 
+  }
+    .card-li {
+      width: 100%;
+      flex-shrink: 0;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px 1px #e1e5e8;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      transition: box-shadow 0.2s ease-in-out;
+      position: relative; }
+      .match:hover {
+        box-shadow: 0 2px 6px 1px #d3d7da; }
+      .title {
+        margin: 15px 0;
+        font-size: 16px;
+        font-weight: 800;
+        font-style: normal;
+        color: #20455e; }
+      .userDate {
+          margin: 5px 0;
+          font-size: 14px;
+          font-weight: 400;
+          font-style: normal;
+          color: #20455e; }
+       .matches .match footer {
+        display: flex;
+        justify-content: space-between; }
+ .meta-data {
+          color: #7a92a5;
+          font-size: 12px;
+          margin: 10px 0;
+          flex-shrink: 0; 
+        }
+
+.dark > * {
+  color: white !important;
+  
+ 
+}
+
+@media screen and (max-width:460px){
+  .matches-container{
+    width: 100%;
+  }
+  body {
+    padding-left: 20px; 
+  }
+
+
+  
+}
