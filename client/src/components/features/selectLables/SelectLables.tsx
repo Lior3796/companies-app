@@ -1,24 +1,35 @@
-import React, { useState, FC, useRef, RefObject, useEffect } from "react";
+import React, { FC } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { filterByLabel } from "../../../utililties/filterSearch";
 import { UseAppContext } from "../../../context/context";
 import { blue } from "@mui/material/colors";
+import { Match } from "../../../types/types";
+import { useState } from "react";
+
+interface PropsMatches {
+	matches: Match[];
+}
+
+interface IOption {
+	value: string;
+	click: boolean;
+}
 
 export const SelectLables: FC = () => {
-	const { matches, setMatches, theme } = UseAppContext();
-	const checkBoxRef: RefObject<HTMLButtonElement> = useRef(null);
-
-	const setOptionToCheckbox = (option: string) => {
-		const filterdMatches = filterByLabel(matches, option);
+	const { setMatches, matches, theme } = UseAppContext();
+	const [checkboxState, setCheckboxState] = useState({
+		Decline: false,
+		Open: false,
+		Possible: false,
+		Close: false,
+	});
+	const setOptionToCheckbox = (option: IOption) => {
+		const filterdMatches = filterByLabel(matches, option.value);
 		setMatches(filterdMatches);
 	};
 
-	useEffect(() => {
-		if (theme) return;
-		const svgElement = checkBoxRef.current?.children[0];
-	}, [theme]);
 	const label = { inputProps: { "aria-label": "Checkbox demo" } };
 	const checkboxStyle = {
 		color: theme && blue[800],
@@ -36,23 +47,27 @@ export const SelectLables: FC = () => {
 		>
 			<FormGroup>
 				<FormControlLabel
-					onClick={() => setOptionToCheckbox("Decline")}
+					onClick={() =>
+						setOptionToCheckbox({ value: "Decline", click: false })
+					}
 					control={<Checkbox {...label} color="secondary" sx={checkboxStyle} />}
 					label="Decline"
 				/>
 				<FormControlLabel
-					onClick={() => setOptionToCheckbox("Possible")}
-					control={<Checkbox sx={checkboxStyle} />}
+					onClick={() =>
+						setOptionToCheckbox({ value: "Possible", click: false })
+					}
+					control={<Checkbox {...label} color="secondary" sx={checkboxStyle} />}
 					label="Possible"
 				/>
 				<FormControlLabel
-					onClick={() => setOptionToCheckbox("Open")}
-					control={<Checkbox sx={checkboxStyle} />}
+					onClick={() => setOptionToCheckbox({ value: "Open", click: false })}
+					control={<Checkbox {...label} color="secondary" sx={checkboxStyle} />}
 					label="Open"
 				/>
 				<FormControlLabel
-					onClick={() => setOptionToCheckbox("Close")}
-					control={<Checkbox sx={checkboxStyle} />}
+					onClick={() => setOptionToCheckbox({ value: "Close", click: false })}
+					control={<Checkbox {...label} color="secondary" sx={checkboxStyle} />}
 					label="Close"
 				/>
 			</FormGroup>

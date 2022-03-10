@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import { Card } from "../card/Card";
-import { Match } from "../../../api";
+import { Match } from "../../../types/types";
 import { UseAppContext } from "../../../context/context";
 import {
 	filteredByFullName,
@@ -13,64 +13,59 @@ import {
 
 interface PropsMatches {
 	matches: Match[];
-	search: string;
 }
-
-type Selection = {
-	"Company-Name": Array<Match>;
-	"Full Name": Array<Match>;
-	"Credit Score": Array<Match>;
-	Balance: Array<Match>;
-	Email: Array<Match>;
-	Amount: Array<Match>;
-	default: Array<Match>;
-};
 
 // Add flow to change Matches by filter checkbox - Next step
 
-export const Matches: FC<PropsMatches> = ({
-	matches,
-	search,
-}: {
-	matches: Match[];
-	search: string;
-}) => {
-	const { filterChoice, setFilterChoice, theme } = UseAppContext();
+export const Matches: FC = () => {
+	const { matches, filterChoice, search } = UseAppContext();
+	const [searchMatches, setSearchMatches] = useState<Match[]>(matches);
 
 	const checkUserChoice = () => {
+		let newMatches;
 		switch (filterChoice) {
-			case "Company-Name":
-				return filterByCompanyName(matches, search);
-
+			case "Company-name":
+				newMatches = filterByCompanyName(matches, search);
+				setSearchMatches(newMatches);
+				return;
 			case "Full Name":
-				return filteredByFullName(matches, search);
-
+				newMatches = filteredByFullName(matches, search);
+				setSearchMatches(newMatches);
+				return;
 			case "Balance":
-				return filterByBalance(matches, search);
-
+				newMatches = filterByBalance(matches, search);
+				setSearchMatches(filterByBalance(matches, search));
+				return;
 			case "Credit Score":
-				return filterByCreditScore(matches, search);
-
+				newMatches = filterByCreditScore(matches, search);
+				setSearchMatches(newMatches);
+				return;
 			case "Email":
-				return filterByEmail(matches, search);
-
+				setSearchMatches(filterByEmail(matches, search));
+				return;
 			case "Amount":
-				return filterByAmountReq(matches, search);
-
+				newMatches = filterByAmountReq(matches, search);
+				setSearchMatches(newMatches);
+				return;
 			default:
-				return filterByCompanyName(matches, search);
+				setSearchMatches(filterByCompanyName(matches, search));
 		}
 	};
 
+	useEffect(() => {
+		checkUserChoice();
+	}, [matches, search]);
+
+	const memoMatches = useMemo(
+		() => searchMatches?.map((match) => <Card card={match} />),
+		[searchMatches]
+	);
 	return (
 		<ul className={`matches-container `}>
 			<div className={`matches-results-number `}>
-				Showing {matches.length} results
+				Showing {matches?.length} results
 			</div>
-
-			{checkUserChoice().map((match) => (
-				<Card card={match} />
-			))}
+			{memoMatches}
 		</ul>
 	);
 };

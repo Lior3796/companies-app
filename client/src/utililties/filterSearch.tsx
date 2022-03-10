@@ -1,4 +1,4 @@
-import { Match } from "../api";
+import { Match } from "../types/types";
 
 export const filteredByFullName = (matches: Array<Match>, search: String) => {
 	if (search.length <= 0) return matches;
@@ -15,6 +15,7 @@ export const filteredByFullName = (matches: Array<Match>, search: String) => {
 export const filterByCompanyName = (matches: Array<Match>, search: String) =>
 	matches.filter((t) => {
 		const { companyName } = t;
+
 		if (search.length <= 0) return t;
 		return (
 			companyName.toLowerCase().substring(0, search.length) ===

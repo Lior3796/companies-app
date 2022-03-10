@@ -2,7 +2,7 @@ import React from "react";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { UseAppContext, UseKeyContext } from "../../../context/context";
-import { Match } from "../../../api";
+import { Match } from "../../../types/types";
 
 export const DeclineButton = () => {
 	const { matches, setMatches, counter, setCounter } = UseAppContext();

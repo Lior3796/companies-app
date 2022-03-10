@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { createApiClient, Match } from "../api";
+import { createApiClient } from "../api";
+import { Match } from "../types/types";
 
 // Add flow to change Matches by filter checkbox
 
-export const useFetchMatches = (page: Number): void | Match[] => {
+export const useFetchMatches = (page: Number): Array<Object | Match | void> => {
 	const [matches, setMatches] = useState<Match[] | void>([]);
 
 	const fetchMatches = async () => {
@@ -15,5 +16,5 @@ export const useFetchMatches = (page: Number): void | Match[] => {
 		fetchMatches();
 	}, [page]);
 
-	return matches;
+	return [matches, setMatches];
 };

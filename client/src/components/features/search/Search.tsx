@@ -6,7 +6,7 @@ interface ISearchProps {
 	setSearch: React.SetStateAction<any>;
 }
 
-export const Search: FC<ISearchProps> = ({ search, setSearch }) => {
+export const Search: FC<ISearchProps> = ({ setSearch }) => {
 	const onSearch = (val: string) => {
 		let searchDebounce;
 		clearTimeout(searchDebounce);

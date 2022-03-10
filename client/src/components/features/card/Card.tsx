@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { CreditScore } from "../creditScore/CreditScore";
 import { KeyProvider, UseAppContext } from "../../../context/context";
-import { Match } from "../../../api";
+import { Match } from "../../../types/types";
 
 interface CardProps {
 	card: Match;

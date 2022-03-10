@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FC } from "react";
-import "./creditScore.css";
+
 import { ApproveButton } from "../approveButton/ApproveButton";
 import { DeclineButton } from "../declineButton/DeclineButton";
 import { useThemeStyle } from "../../../hooks/useThemeStyle";

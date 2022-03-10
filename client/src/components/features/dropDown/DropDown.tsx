@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import { UseAppContext } from "../../../context/context";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { SelectLables } from "../selectLables/SelectLables";
+import { Match } from "../../../types/types";
 
-export const DropDown = () => {
+export const DropDown: FC = () => {
 	const [userChoice, setUserChoice] = useState<string>("");
-	const { filterChoice, setFilterChoice, theme } = UseAppContext();
+	const { matches, filterChoice, setFilterChoice, theme } = UseAppContext();
 
 	const handleChange = (event: SelectChangeEvent<string>): void => {
 		setUserChoice(event.target.value);
