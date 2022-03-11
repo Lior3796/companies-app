@@ -19,4 +19,4 @@ Includes this technologies:
 7. then run the project by running `npm start`
 
 You should now have the development version running on your computer and accessible via http://localhost:3000
-and api http://localhost:301
+and server http://localhost:3001
