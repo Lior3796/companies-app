@@ -1,5 +1,5 @@
 import { Match } from "../types/types";
-
+import { getAllMatchesForFilter } from "../api";
 export const filteredByFullName = (matches: Array<Match>, search: String) => {
 	if (search.length <= 0) return matches;
 	return matches.filter((t) => {
@@ -53,10 +53,20 @@ export const filterByCreditScore = (matches: Array<Match>, search: String) =>
 		return creditScore.substring(0, search.length) === search.toLowerCase();
 	});
 
-export const filterByLabel = (
+interface IOption {
+	value: string;
+	click: boolean;
+}
+
+export const filterByLabel = async (
 	matches: Array<Match>,
-	label: string
-): Array<Match> =>
-	matches.filter((item: Match): boolean | undefined =>
-		item.labels?.includes(label)
-	);
+	option: IOption[]
+): Promise<void | Match[]> => {
+	let labels = option.filter((item) => item.click);
+	let filterMatches: Array<Match> | [] | void = [];
+	filterMatches = await getAllMatchesForFilter(labels[0].value);
+
+	return filterMatches;
+
+	// return allMatches?.filter((match) => !match.labels?.includes(option.value));
+};

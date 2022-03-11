@@ -11,3 +11,14 @@ export const createApiClient = (page: Number): Promise<Array<Match> | void> => {
 
 	return matches;
 };
+
+export const getAllMatchesForFilter = (
+	label: string
+): Promise<Array<Match> | void> => {
+	const matches = axios
+		.get(`http://localhost:3000/data?&labels=${label}`)
+		.then((res): Match[] => res.data)
+		.catch((err): void => console.log(err));
+
+	return matches;
+};
