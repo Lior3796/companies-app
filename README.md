@@ -1,4 +1,4 @@
-# Fundit Full Stack Entry Exam
+# Companies app
 
 **Hi there!**  
 This is my companies-app
