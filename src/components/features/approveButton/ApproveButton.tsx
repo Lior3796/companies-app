@@ -4,12 +4,12 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { UseKeyContext, UseAppContext } from "../../../context/context";
 export const ApproveButton = () => {
 	const keys = UseKeyContext();
-	const { counter, setCounter } = UseAppContext();
-	console.log(counter);
+	const { counter, setCounter, setRemoveItem } = UseAppContext();
+
 	return (
 		<div className="approve-btn">
 			<IconButton
-				onClick={() => setCounter({ ...counter, approve: counter.approve + 1 })}
+				onClick={() => setRemoveItem((removeItem: boolean) => !removeItem)}
 				aria-label="add to shopping cart"
 			>
 				<FavoriteIcon fontSize="large" />

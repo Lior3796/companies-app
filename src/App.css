@@ -1,7 +1,7 @@
 :root {
   --max-width-sm-screen: 460px;
   --min-width-md-screen: "461px";
-  --max-width-md-screeen:"720px";
+  --max-width-md-screen:"720px";
   --min-width-lg-screen: "721px";
 }
 body {
@@ -94,6 +94,10 @@ body {
   color: white !important;
   
  
+}
+
+.remove-item{
+  outline:rgb(0, 255, 0,0.6);
 }
 
 .creditScore-container{

@@ -12,6 +12,7 @@ export const DeclineButton = () => {
 		const newMatches = matches.filter(
 			(item: Match): boolean => item.id !== keys.id
 		);
+
 		setMatches(newMatches);
 		setCounter({ ...counter, decline: counter.decline + 1 });
 	};

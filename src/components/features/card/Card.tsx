@@ -8,13 +8,14 @@ interface CardProps {
 }
 
 export const Card: FC<CardProps> = ({ card }) => {
-	const { theme } = UseAppContext();
+	const { theme, removeItem } = UseAppContext();
 	const { companyName, id, amountReq } = card;
 	const { firstName, lastName, email } = card.borrower.user;
 	const { creditScore } = card.borrower;
+
 	return (
 		<KeyProvider value={{ id }}>
-			<li key={id} className={`card-li ${theme && "dark"}`}>
+			<li key={id} className={`card-li ${theme && "dark"} remove-item`}>
 				<CreditScore score={creditScore} />
 				<h5 className="title">{companyName}</h5>
 				<div className="matchData">

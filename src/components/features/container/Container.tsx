@@ -17,6 +17,7 @@ export const Container: FC = () => {
 	const [page, setPage] = useState<Number>(1);
 	const [matches, setMatches] = useFetchMatches(page) || [];
 	const [search, setSearch] = useState<string>("");
+	const [removeItem, setRemoveItem] = useState<boolean>(false);
 
 	const [theme, setTheme] = useState(false);
 	const [filterChoice, setFilterChoice] = useState<string>("Company-name");
@@ -42,6 +43,8 @@ export const Container: FC = () => {
 				theme,
 				search,
 				setSearch,
+				removeItem,
+				setRemoveItem,
 			}}
 		>
 			<main className={`app-container ${theme && "dark"}`}>
