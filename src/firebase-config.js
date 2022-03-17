@@ -3,10 +3,10 @@ import { getFirestore } from "@firebase/firestore";
 
 const firebaseConfig = {
 	apiKey: process.env.API_KEY,
-	authDomain: "companies-app.firebaseapp.com",
-	projectId: "companies-app",
-	storageBucket: "companies-app.appspot.com",
-	messagingSenderId: "592143629880",
+	authDomain: process.env.AUTO_DOMAIN,
+	projectId: process.env.PROJECT_ID,
+	storageBucket: process.env.STORAGE_BUCKET,
+	messagingSenderId: process.env.MESSAGING_SENDER_ID,
 	appId: process.env.API_ID,
 };
 

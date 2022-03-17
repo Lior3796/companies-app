@@ -32,10 +32,7 @@
 		"typescript": "^3.9.10"
 	},
 	"scripts": {
-		"dev": "react-scripts start",
-		"watch:server": "json-server --watch ./data/db.json",
-		"watch:client": "set PORT=3006 && react-scripts start",
-		"start": "concurrently npm:watch:*",
+		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
